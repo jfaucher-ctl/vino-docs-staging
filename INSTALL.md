@@ -64,9 +64,9 @@ List of Tables
 
 <div id="Table of Figures" dir="ltr">
 
-[Table 1. ViNO Keycloak Roles and Permissions](Table-1)
+[Table 1. ViNO Keycloak Roles and Permissions](Table_1)
 
-[Table 2. Keycloak Task-to-Role Permissions](Table-2)
+[Table 2. Keycloak Task-to-Role Permissions](Table_2)
 
 </div>
 
