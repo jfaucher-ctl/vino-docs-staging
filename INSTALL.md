@@ -36,27 +36,27 @@ owners.
 
 [System Requirements](#System-Requirements)
 
-[ViNO Installation Process](#ViNO-InstallationProcess)
+[ViNO Installation Process](#ViNO-Installation-Process)
 
 [Installing ViNO](#Installing-ViNO)
 
-[Creating a Keycloak Realm for ViNO](#Creating_a_Keycloak_Realm_for-ViNO)
+[Creating a Keycloak Realm for ViNO](#Creating-a-Keycloak-Realm-for-ViNO)
 
-[ViNO Keycloak Roles and Groups](#ViNO_Keycloak_Roles_and-Groups)
+[ViNO Keycloak Roles and Groups](#ViNO-Keycloak-Roles-and-Groups)
 
-[Populating the Keycloak Realm for ViNO](#Populating_the_Keycloak_Realm_for-ViNO)
+[Populating the Keycloak Realm for ViNO](#Populating-the-Keycloak-Realm-for-ViNO)
 
-[Adding Roles in Keycloak](#Adding_Roles_in-Keycloak)
+[Adding Roles in Keycloak](#Adding-Roles-in-Keycloak)
 
-[Adding a Group in Keycloak](#Adding_a_Group_in-Keycloak)
+[Adding a Group in Keycloak](#Adding-a-Group-in-Keycloak)
 
-[Adding a User in Keycloak](#Adding_a_User_in-Keycloak)
+[Adding a User in Keycloak](#Adding-a-User-in-Keycloak)
 
-[Adding a ViNO Client in Keycloak](#Adding_a_ViNO_Client_in-Keycloak)
+[Adding a ViNO Client in Keycloak](#Adding-a-ViNO-Client-in-Keycloak)
 
 [Initializing ViNO](#Initializing-ViNO)
 
-[Logging in to ViNO](#Logging_in_to-ViNO)
+[Logging in to ViNO](#Logging-in-to-ViNO)
 
 </div>
 
