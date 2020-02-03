@@ -749,8 +749,7 @@ To add a group:
 
 5. Select roles from the **Available Roles** menu.
 
-6 Click **Add Selected** to assign the roles to the new group. For
-    example, you could add the **user** and the **administrator** roles
+6. Click **Add Selected** to assign the roles to the new group. For example, you could add the **user** and the **administrator** roles
     to a new group. See
     <span style="text-decoration: none"><span style="background: #c0c0c0">Table
     1</span></span> for a description of user roles and permissions.
