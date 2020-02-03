@@ -1,4 +1,4 @@
-# ViNO
+# Virtual Network Orchestrator (ViNO) Documentation
 
 The documentation for the Virtual Network Orchestrator (ViNO) is split into two parts:
 

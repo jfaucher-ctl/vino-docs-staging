@@ -7,7 +7,9 @@
 <div id="TextSection" dir="ltr">
 
 <span class="sd-abs-pos" style="position: absolute; top: 0in; left: 0in; width: 343px">![](Virtual%20Network%20Orchestrator%20\(ViNO\)%20Installation%20Guide_html_ecc8317a0e8f7dff.png)
-</span>Virtual Network Orchestrator (ViNO) Installation Guide
+</span>
+
+Virtual Network Orchestrator (ViNO) Installation Guide
 
 Software Version 1.0.1
 
@@ -16,71 +18,61 @@ February 3, 2020
   
   
 
-©2020 CenturyLink. All Rights Reserved. The CenturyLink mark, pathways
+&copy;2020 CenturyLink. All Rights Reserved. The CenturyLink mark, pathways
 logo and certain CenturyLink product names are the property of
 CenturyLink. All other marks are the property of their respective
 owners.
-
-  
-  
-
-  
-  
-
 </div>
 
 <div id="Table of Contents1" dir="ltr">
 
 <div id="Table of Contents1_Head" dir="ltr">
 
-**Contents**
+## Contents
 
 </div>
 
-[Introduction 1](#__RefHeading___Toc1514_3497254265)
+[Introduction](#Introduction)
 
-[System Requirements 1](#__RefHeading___Toc1516_3497254265)
+[System Requirements](#System_Requirements)
 
-[ViNO Installation Process 1](#__RefHeading___Toc1518_3497254265)
+[ViNO Installation Process](#ViNO_InstallationProcess)
 
-[Installing ViNO 2](#__RefHeading___Toc1520_3497254265)
+[Installing ViNO](#Installing_ViNO)
 
-[Creating a Keycloak Realm for ViNO
-2](#__RefHeading___Toc1522_3497254265)
+[Creating a Keycloak Realm for ViNO](#Creating_a_Keycloak_Realm_for_ViNO)
 
-[ViNO Keycloak Roles and Groups 3](#__RefHeading___Toc1524_3497254265)
+[ViNO Keycloak Roles and Groups](#ViNO_Keycloak_Roles_and_Groups)
 
-[Populating the Keycloak Realm for ViNO
-8](#__RefHeading___Toc1526_3497254265)
+[Populating the Keycloak Realm for ViNO](#Populating_the_Keycloak_Realm_for_ViNO)
 
-[Adding Roles in Keycloak 8](#__RefHeading___Toc1528_3497254265)
+[Adding Roles in Keycloak](#Adding_Roles_in_Keycloak)
 
-[Adding a Group in Keycloak 9](#__RefHeading___Toc1530_3497254265)
+[Adding a Group in Keycloak](#Adding_a_Group_in_Keycloak)
 
-[Adding a User in Keycloak 9](#__RefHeading___Toc1532_3497254265)
+[Adding a User in Keycloak](#Adding_a_User_in_Keycloak)
 
-[Adding a ViNO Client in Keycloak
-10](#__RefHeading___Toc1534_3497254265)
+[Adding a ViNO Client in Keycloak](#Adding_a_ViNO_Client_in_Keycloak)
 
-[Initializing ViNO 10](#__RefHeading___Toc1536_3497254265)
+[Initializing ViNO](#Initializing_ViNO)
 
-[Logging in to ViNO 11](#__RefHeading___Toc1538_3497254265)
+[Logging in to ViNO](#Logging_in_to_ViNO)
 
 </div>
 
 List of Tables
 
-<div id="Table of Figures1" dir="ltr">
+<div id="Table of Figures" dir="ltr">
 
-[Table 1. ViNO Keycloak Roles and Permissions 3](#Table!0%7Csequence)
+[Table 1. ViNO Keycloak Roles and Permissions](#Table_1)
 
-[Table 2. Keycloak Task-to-Role Permissions 4](#Table!1%7Csequence)
+[Table 2. Keycloak Task-to-Role Permissions](#Table_2)
 
 </div>
 
   
 
-# Introduction
+## Introduction
 
 This document describes how to install and initialize a ViNO instance
 and how to create a realm in Keycloak.
@@ -97,7 +89,7 @@ Network Orchestrator (ViNO) User Guide*.
 
 The VINO project was developed and tested on CentOS release 7.6.
 
-# System Requirements
+## System Requirements
 
 VINO is designed to be installed on a new minimal installation of
 [CentOS
@@ -115,7 +107,7 @@ or exceeds the following hardware requirements:
 
 • A minimum of 8 GB of RAM
 
-# ViNO Installation Process
+## ViNO Installation Process
 
 The following sections describe the complete process of installing and
 initializing ViNO in addition to creating and populating a Keycloak
@@ -135,60 +127,59 @@ The order in which the process must be completed is as follows:
   - <span style="text-decoration: none"><span style="background: #c0c0c0">Initializing
     ViNO</span></span>
 
-# Installing ViNO
+### Installing ViNO
 
 To install an instance of ViNO instance:
 
 1.  Download the ViNO installation file
     (vino-product-docker.1.0.1-4.tar.gz) from Github. For example:
 
-curl
-<https://github.com/CenturyLink-ViNO/vino-product/releases/download/1.0.1/vino-product-docker.1.0.1-9.tar.gz>
+        curl <https://github.com/CenturyLink-ViNO/vino-product/releases/download/1.0.1/vino-product-docker.1.0.1-9.tar.gz>
 
-1.  Run the installation script: **sh ./binstall.sh**. The installation
+2.  Run the installation script: **sh ./binstall.sh**. The installation
     takes several minutes. When it installs successfully, the following
     messages are displayed:
 
-$ ViNO ---\> The ViNO docker images have been loaded. Please see the
-*Virtual Network Orchestrator (ViNO) Installation Guide* for detailed
-instructions on how to set up and run ViNO.
+        $ ViNO ---\> The ViNO docker images have been loaded. Please see the
+        *Virtual Network Orchestrator (ViNO) Installation Guide* for detailed
+        instructions on how to set up and run ViNO.
+        
+        $ ViNO ---\> log available in /var/log/vino.install/ViNO Docker
+        Distribution\_product\_Install.1359.log.
+        
+        If the installation does not install properly, check the log file for
+        error messages. Log files are located in /var/log/vino.install.
 
-$ ViNO ---\> log available in /var/log/vino.install/ViNO Docker
-Distribution\_product\_Install.1359.log.
-
-If the installation does not install properly, check the log file for
-error messages. Log files are located in /var/log/vino.install.
-
-2.  Proceed to
+3.  Proceed to
     <span style="text-decoration: none"><span style="background: #c0c0c0">Creating
     a Keycloak Realm for ViNO</span></span>.
 
-# Creating a Keycloak Realm for ViNO
+### Creating a Keycloak Realm for ViNO
 
 After ViNO has been installed, you must create a Keycloak realm. ViNO
 uses [Keycloak](https://www.keycloak.org/) for authorization.
 
 To create a Keycloak realm:
 
-1.  Use the command line to navigate to the directory:
-    **/opt/vino/vino-docker**.
+1.  Use the command line to navigate to the directory: 
+       
+        /opt/vino/vino-docker
 
-<!-- end list -->
+2.  From the directory, run the following command to start the four docker containers for ViNO.
 
-3.  From the directory, run the command **docker-compose -p vino up -d**
-    to start the four docker containers for ViNO.
+        docker-compose -p vino up -d
 
-4.  Open an internet browser and enter the IP address of your ViNO host
+3.  Open an internet browser and enter the IP address of your ViNO host
     in the URL bar followed by /auth (for example: 123.45.6.789/auth).
     This URL goes to the Keycloak homepage.
 
-5.  Click **Administration Console**, which prompts you to log with the
+4.  Click **Administration Console**, which prompts you to log with the
     default username **admin** and default password **changethis**. We
     recommend changing the default password.
 
-6.  From the **Master** drop-down, select **Add Realm**.
+5.  From the **Master** drop-down, select **Add Realm**.
 
-7.  Enter **vino** in the **Name** field, then click Create.
+6.  Enter **vino** in the **Name** field, then click Create.
 
 Proceed to the next sections for information on:
 
@@ -196,7 +187,7 @@ Proceed to the next sections for information on:
 
   - Adding roles, groups, users, and clients in Keycloak.
 
-# ViNO Keycloak Roles and Groups
+### ViNO Keycloak Roles and Groups
 
 ViNO Keycloak roles each have unique permissions that apply to users
 assigned to a group or to multiple groups.
@@ -214,7 +205,7 @@ ViNO provides four roles that correspond to different permissions.
 <span style="background: #c0c0c0">Table 1</span> defines the roles and
 their permissions.
 
-**Table <span style="background: #c0c0c0">1</span>. ViNO Keycloak Roles
+**Table <span id="Table_1" style="background: #c0c0c0">1</span>. ViNO Keycloak Roles
 and Permissions**
 
 <table>
@@ -261,9 +252,8 @@ and Permissions**
 </tbody>
 </table>
 
-<span style="background: #c0c0c0">Table 2</span> provides a matrix of
+<span id="Table_2" style="background: #c0c0c0">Table 2</span> provides a matrix of
 task-to-role permissions.
-
 **Table <span style="background: #c0c0c0">2</span>. Keycloak
 Task-to-Role Permissions**
 
@@ -691,7 +681,7 @@ Task-to-Role Permissions**
   
   
 
-# Populating the Keycloak Realm for ViNO
+### Populating the Keycloak Realm for ViNO
 
 To populate the Keycloak realm for ViNO, you need to add and configure a
 role, group, user, and client. Refer to the following sections for
@@ -709,7 +699,7 @@ information on completing these tasks.
   - <span style="text-decoration: none"><span style="background: #c0c0c0">Adding
     a ViNO Client in Keycloak</span></span>
 
-## Adding Roles in Keycloak
+#### Adding Roles in Keycloak
 
 The following roles must be added in Keycloak. The roles must be added
 exactly as shown below for ViNO to function correctly.
@@ -728,16 +718,14 @@ To add roles:
 
 1.  Click on the Roles menu, and then click **Add Role**.
 
-<!-- end list -->
+2.  Enter **user** in the **Role Name** field.
 
-8.  Enter **user** in the **Role Name** field.
+3.  Click Save to create the **user** role.
 
-9.  Click Save to create the **user** role.
-
-10. Repeat steps 1-3 to create four additional roles: **operator**,
+4. Repeat steps 1-3 to create four additional roles: **operator**,
     **provisioner**, **designer**, and **administrator**.
 
-## Adding a Group in Keycloak
+#### Adding a Group in Keycloak
 
 Creating a group in Keycloak enables you to manage users. **Groups** are
 *user-centric*. They are a collection of users. For example, you may
@@ -745,31 +733,29 @@ want to create a group named Administrators, which has been mapped to
 the administrator role. Then you would assign users to the new
 Administrators group to give them administrator permissions.
 
-2.  Each ViNO group must contain the **user** role, which provides basic
+1.  Each ViNO group must contain the **user** role, which provides basic
     access permissions.
 
-To add a group:
+    To add a group:
+    
+    1.  Select the **Groups** menu, and then click **New**.
+    
+    2.  Enter a group name in the **Name** field. Unlike roles, specific
+        names for groups are not required.
+    
+    3.  Click Save to create the new group.
 
-1.  Select the **Groups** menu, and then click **New**.
+2. Select the **Role Mappings** menu.
 
-2.  Enter a group name in the **Name** field. Unlike roles, specific
-    names for groups are not required.
+3. Select roles from the **Available Roles** menu.
 
-3.  Click Save to create the new group.
-
-<!-- end list -->
-
-11. Select the **Role Mappings** menu.
-
-12. Select roles from the **Available Roles** menu.
-
-13. Click **Add Selected** to assign the roles to the new group. For
+4. Click **Add Selected** to assign the roles to the new group. For
     example, you could add the **user** and the **administrator** roles
     to a new group. See
     <span style="text-decoration: none"><span style="background: #c0c0c0">Table
     1</span></span> for a description of user roles and permissions.
 
-## Adding a User in Keycloak
+#### Adding a User in Keycloak
 
 This section describes how to add a new user to Keycloak.
 
@@ -784,23 +770,21 @@ To add a user:
 
 4.  Click Save to save the new user.
 
-<!-- end list -->
-
-14. Click the **Credentials** tab to configure a temporary password for
+5. Click the **Credentials** tab to configure a temporary password for
     the new user.
 
-15. (Optional) Change the **Temporary** setting to Off to disable
+6. (Optional) Change the **Temporary** setting to Off to disable
     requiring the new user to change the default password at login.
 
-16. Enter a password, confirm it, and click **Reset Password** to
+7. Enter a password, confirm it, and click **Reset Password** to
     configure the new password.
 
-17. Click the **Groups** tab, and then select the new **** group (that
+8. Click the **Groups** tab, and then select the new **** group (that
     was previously created) from the **Available Groups** menu.
 
-18. Click Join to add the new user to the selected group.
+9. Click Join to add the new user to the selected group.
 
-## Adding a ViNO Client in Keycloak
+#### Adding a ViNO Client in Keycloak
 
 Adding a client to Keycloak enables ViNO to request Keycloak to
 authenticate users.
@@ -809,83 +793,75 @@ To add a client:
 
 1.  Click the **Clients** menu, and then click Create.
 
-<!-- end list -->
-
-19. Enter **vino-api** in the **Client ID** field, and then click Save
+2. Enter **vino-api** in the **Client ID** field, and then click Save
     to create the **vino-api** client.
 
-20. Under the **Access Type** drop-down, select **Confidential**.
+3. Under the **Access Type** drop-down, select **Confidential**.
 
-21. Type **\*** in the **Valid Redirect URIs** field and in the **Web
+4. Type * in the **Valid Redirect URIs** field and in the **Web
     Origins** field, then click Save.
 
-22. Click the **Credentials** tab to view the generated client secret.
+5. Click the **Credentials** tab to view the generated client secret.
 
-23. Copy the value in the vino-api client **Secret** field for use in
+6. Copy the value in the vino-api client **Secret** field for use in
     step 3 in
     <span style="text-decoration: none"><span style="background: #c0c0c0">Initializing
     ViNO</span></span>.
 
-# Initializing ViNO
+## Initializing ViNO
 
 To initialize ViNO:
 
 1.  Run the command **./initialize.sh** using the command line in the
     /opt/vino/vino-docker directory.
 
-<!-- end list -->
-
-24. Press Enter when the script prompts for Vino Name, Default route,
+2. Press Enter when the script prompts for Vino Name, Default route,
     and Keycloak host.
 
-25. When the script prompts for the Keycloak client secret, paste the
+3. When the script prompts for the Keycloak client secret, paste the
     **vino-api** client secret that you copied in step 6 in
     <span style="text-decoration: none"><span style="background: #c0c0c0">Adding
     a ViNO Client in Keycloak</span></span>, and then press Enter.
 
-26. Press Enter for the remaining prompts. ViNO completes the
+4. Press Enter for the remaining prompts. ViNO completes the
     initialization.
 
-27. The next prompt enables you to add a signing certificate to the ViNO
+5. The next prompt enables you to add a signing certificate to the ViNO
     set of accepted CA certificates to securely communicate with
     upstream and downstream services: **Would you like to add an
     additional Root CA Certificate to the ViNO Node Runtime? (Yes/No)**
 
-Select:
+    Select:
+    
+      - **Yes** to add a signing certificate to facilitate SSL
+        communications (such as, HTTPS or LDAPS).
+    
+      - **No** to bypass this option.
 
-  - **Yes** to add a signing certificate to facilitate SSL
-    communications (such as, HTTPS or LDAPS).
-
-  - **No** to bypass this option.
-
-<!-- end list -->
-
-28. When the initialize.sh script has finished running, open a browser
+6. When the initialize.sh script has finished running, open a browser
     and enter the IP address of your ViNO host in the URL bar. This step
     navigates to the ViNO Login screen.
 
-# Logging in to ViNO
+## Logging in to ViNO
 
 To log in to ViNO:
 
 1.  In the **Authentication Required** screen, click Authenticate.
 
-<!-- end list -->
-
-29. In the **Log In** screen, enter the username and password that you
+2. In the **Log In** screen, enter the username and password that you
     created when generating the Keycloak realm, then click Log In. ViNO
     displays a blank homepage as shown below.
 
-![](Virtual%20Network%20Orchestrator%20\(ViNO\)%20Installation%20Guide_html_6843aca5d59b1884.png)
+    ![Figure_1](Virtual%20Network%20Orchestrator%20\(ViNO\)%20Installation%20Guide_html_6843aca5d59b1884.png)
+    
+    **Caution**: To avoid being logged out after 10 minutes while working in
+    the Service Manager, you must open the Service Manager in a separate
+    window. If you only have the Service Manager open, you are logged out of
+    ViNO after 10 minutes with no warning. Even after being logged out, it
+    appears that you can work and save in the Service Manager, but your
+    changes are not saved.
 
-**Caution**: To avoid being logged out after 10 minutes while working in
-the Service Manager, you must open the Service Manager in a separate
-window. If you only have the Service Manager open, you are logged out of
-ViNO after 10 minutes with no warning. Even after being logged out, it
-appears that you can work and save in the Service Manager, but your
-changes are not saved.
-
-30. Refer to the *Virtual Network Orchestrator (ViNO) User Guide* for
+3. Refer to the [Virtual Network Orchestrator (ViNO) User Guide](USER.MD) for
     information on using ViNO.
 
 <div title="footer">
