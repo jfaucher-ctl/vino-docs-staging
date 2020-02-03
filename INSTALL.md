@@ -733,23 +733,23 @@ want to create a group named Administrators, which has been mapped to
 the administrator role. Then you would assign users to the new
 Administrators group to give them administrator permissions.
 
-1.  Each ViNO group must contain the **user** role, which provides basic
+**NOTE** Each ViNO group must contain the **user** role, which provides basic
     access permissions.
 
-    To add a group:
-    
-    1.  Select the **Groups** menu, and then click **New**.
-    
-    2.  Enter a group name in the **Name** field. Unlike roles, specific
-        names for groups are not required.
-    
-    3.  Click Save to create the new group.
+To add a group:
 
-2. Select the **Role Mappings** menu.
+1.  Select the **Groups** menu, and then click **New**.
 
-3. Select roles from the **Available Roles** menu.
+2.  Enter a group name in the **Name** field. Unlike roles, specific
+    names for groups are not required.
 
-4. Click **Add Selected** to assign the roles to the new group. For
+3.  Click Save to create the new group.
+
+4. Select the **Role Mappings** menu.
+
+5. Select roles from the **Available Roles** menu.
+
+6 Click **Add Selected** to assign the roles to the new group. For
     example, you could add the **user** and the **administrator** roles
     to a new group. See
     <span style="text-decoration: none"><span style="background: #c0c0c0">Table
