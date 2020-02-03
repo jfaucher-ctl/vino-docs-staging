@@ -134,7 +134,7 @@ To install an instance of ViNO instance:
 1.  Download the ViNO installation file
     (vino-product-docker.1.0.1-4.tar.gz) from Github. For example:
 
-        curl <https://github.com/CenturyLink-ViNO/vino-product/releases/download/1.0.1/vino-product-docker.1.0.1-9.tar.gz>
+        curl -LJO https://github.com/CenturyLink-ViNO/vino-product/releases/download/1.0.1/vino-product-docker.1.0.1-9.tar.gz
 
 2.  Run the installation script: **sh ./binstall.sh**. The installation
     takes several minutes. When it installs successfully, the following
