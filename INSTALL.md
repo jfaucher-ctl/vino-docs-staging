@@ -6,7 +6,7 @@
 
 <div id="TextSection" dir="ltr">
 
-<span class="sd-abs-pos" style="position: absolute; top: 0in; left: 0in; width: 343px">![](Virtual%20Network%20Orchestrator%20\(ViNO\)%20Installation%20Guide_html_ecc8317a0e8f7dff.png)
+<span class="sd-abs-pos" style="position: absolute; top: 0in; left: 0in; width: 343px">![](img/Virtual%20Network%20Orchestrator%20\(ViNO\)%20Installation%20Guide_html_ecc8317a0e8f7dff.png)
 </span>
 
 Virtual Network Orchestrator (ViNO) Installation Guide
@@ -852,7 +852,7 @@ To log in to ViNO:
     created when generating the Keycloak realm, then click Log In. ViNO
     displays a blank homepage as shown below.
 
-    ![Figure_1](Virtual%20Network%20Orchestrator%20\(ViNO\)%20Installation%20Guide_html_6843aca5d59b1884.png)
+    ![Figure_1](img/Virtual%20Network%20Orchestrator%20\(ViNO\)%20Installation%20Guide_html_6843aca5d59b1884.png)
     
     **Caution**: To avoid being logged out after 10 minutes while working in
     the Service Manager, you must open the Service Manager in a separate
