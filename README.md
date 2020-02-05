@@ -6,5 +6,5 @@ The documentation for the Virtual Network Orchestrator (ViNO) is split into two 
     - [PDF](Virtual%20Network%20Orchestrator%20(ViNO)%20Installation%20Guide.pdf)
     - [Word Document](Virtual%20Network%20Orchestrator%20(ViNO)%20Installation%20Guide.docx)
 2. [Virtual Network Orchestrator (ViNO) User Guide](USER.md) 
-    - [PDF](Virtual%20Network%20Orchestrator%20(ViNO)%20User%20Guide.pdf)
-    - [Word Document](Virtual%20Network%20Orchestrator%20(ViNO)%20User%20Guide.docx)
+    - [PDF](Virtual%20Network%20Orchestrator%20User%20Guide.pdf)
+    - [Word Document](Virtual%20Network%20Orchestrator%20User%20Guide.docx)
