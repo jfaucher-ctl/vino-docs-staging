@@ -861,7 +861,7 @@ To log in to ViNO:
     appears that you can work and save in the Service Manager, but your
     changes are not saved.
 
-3. Refer to the [Virtual Network Orchestrator (ViNO) User Guide](USER.MD) for
+3. Refer to the [Virtual Network Orchestrator (ViNO) User Guide](USER.md) for
     information on using ViNO.
 
 <div title="footer">
