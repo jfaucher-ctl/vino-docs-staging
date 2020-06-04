@@ -168,7 +168,7 @@ To create a Keycloak realm:
 
 2.  From the directory, run the following command to start the four docker containers for ViNO.
 
-        NGINX_DIR=nginx docker-compose -p vino up -d
+        docker-compose -p vino up -d
 
 3.  Open an internet browser and enter the IP address of your ViNO host
     in the URL bar followed by /auth (for example: 123.45.6.789/auth).
