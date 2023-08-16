@@ -11,9 +11,9 @@
 
 Virtual Network Orchestrator (ViNO) Installation Guide
 
-Software Version 1.0.1
+Software Version 1.1.1
 
-February 3, 2020
+May 29, 2020
 
   
   
@@ -131,11 +131,12 @@ The order in which the process must be completed is as follows:
 
 To install an instance of ViNO instance:
 
-1.  Download and unpack the ViNO installation file
-    (vino-product-docker.1.0.1-4.tar.gz) from Github. For example:
+1.  Download and unpack the latest ViNO installation file from Github (https://github.com/CenturyLink-ViNO/vino-product/releases). For example:
 
-        curl -LJO https://github.com/CenturyLink-ViNO/vino-product/releases/download/1.0.1/vino-product-docker.1.0.1-9.tar.gz
-        tar xvf vino-product-docker.1.0.1-9.tar.gz
+        curl -LJO https://github.com/CenturyLink-ViNO/vino-product/releases/download/1.1.1/vino-product-docker.1.1.1-1.tar.gz
+        tar xvf vino-product-docker.1.1.1-1.tar.gz
+        
+        NOTE: You should replace the download URL and package name in the above commands with the latest release available at https://github.com/CenturyLink-ViNO/vino-product/releases.
 
 2.  Run the installation script: **sh ./binstall.sh**. The installation
     takes several minutes. When it installs successfully, the following
@@ -168,7 +169,7 @@ To create a Keycloak realm:
 
 2.  From the directory, run the following command to start the four docker containers for ViNO.
 
-        docker-compose -p vino up -d
+        NGINX_DIR=nginx docker-compose -p vino up -d
 
 3.  Open an internet browser and enter the IP address of your ViNO host
     in the URL bar followed by /auth (for example: 123.45.6.789/auth).
